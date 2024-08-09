@@ -40,7 +40,7 @@ const menu = [
     },
 ];
 
-export default function Gallery({label}: ButtonProps){
+export default function Gallery(){
    
 
     // return(
