@@ -5,9 +5,9 @@ import Footer from "./components/footer";
 export default function Page() {
   return(
     <div>
-      {/* <Header />
-      <AboutUs /> */}
-      {/* <Gallery label='nothing'/> */}
+      <Header />
+      <AboutUs />
+      {/* <Gallery/> */}
       <Footer />
     </div>
   )
