@@ -1,7 +1,8 @@
+import styles from './styles.module.scss'
 export default function Page() {
   return(
-    <div>
-        This is the main
+    <div className={styles.main}>
+        <h1 className={styles.text}>This is the main</h1>
     </div>
   )
 }
