@@ -31,7 +31,7 @@ export default function Header() {
           <div className={styles.subHeading}>
             <p className={josefinSans.className}>Try great Georgian dishes</p>
           </div>
-            <Button></Button>
+            <Button label="reservation"></Button>
       </div>      
     </header>
   );

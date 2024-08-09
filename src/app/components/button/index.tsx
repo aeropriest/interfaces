@@ -1,11 +1,13 @@
-import variables from "./variables.module.scss";
 import styles from './styles.module.scss'
 import { josefinSans } from "@/app/fonts";
 
-export default function Button(){
+type ButtonProps = {
+    label: string;
+}
+export default function Button({label}: ButtonProps){
     return(
         <button className={styles.mainButton} type='button'>
-            <p className={josefinSans.className}>Reservation</p>            
+            <p className={josefinSans.className}>{label}</p>            
         </button>          
         )
 }
