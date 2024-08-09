@@ -6,35 +6,74 @@
     position: relative;
     background: linear-gradient(rgba($black-color, 0.8),rgba($black-color, 0.6)) ,url(../../public/bg.jpeg) center no-repeat;
     background-size: cover;
-    
+    flex-direction: column; // Stack children vertically
+    display: row;
+
     .brand{
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        @include centering(15%);
         display: flex;
         align-items: center;
     }
+
+    .banner{
+        @include centering(50%);
+        text-align: center;
+    }
+
+    .subheader{
+        font-size: medium;
+    }
+    
+    .logo{
+        margin:0px;
+    }
+    
+    .mainName{
+        font-size: 50px;
+        color: $secondary-color;
+        @include textStyles;
+    }
+    
+    .subName{
+        font-size: 18px;
+        color: $secondary-color;
+        text-align: center;
+        font-weight:lighter;
+        @include textStyles;
+    }
+
 }
 
-.subheader{
-    font-size: medium;
+.mainHeading{
+    font-size: 100px;
+    font-weight: 300;
+    color: $primary-color;
+    margin-bottom: 40px;
 }
 
-.logo{
-    margin:0px;
-}
-
-.mainName{
-    font-size: 50px;
+.subHeading{
+    font-size: 60px;
+    font-weight: 300;
     color: $secondary-color;
-    @include textStyles;
+    margin-bottom: 80px;
 }
 
-.subName{
-    font-size: medium;
+.mainButton{
+    width: 170px;
+    height: 60;
+    font-size: 60;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    font-family: $dancingScript-font;
+    color: $primary-color;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all;
+    &:hover{
+        background-color: $primary-color;
+        color: $black-color;
+    }
 }
-
-// .banner{
-//     margin: 0px;
-// }

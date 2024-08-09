@@ -4,7 +4,7 @@
 .logo{
     font-size: 70px;
     color: $primary-color;
-    font-family: Dancing_Script;
+    font-family: Dancing_Script;    
 }
 
 .border{
@@ -13,5 +13,6 @@
     width: 120px;
     border: 3px solid $primary-color; 
     border-radius: 50%;
+    margin-right: 20px;
 }
 

@@ -3,7 +3,7 @@ $black-color: #000000;
 $primary-color: #d3ab55;
 $secondary-color: #bbb;
 
-$dancingScript-font: var(--Dancing_Script);
+$dancingScript-font: var(--dancing-script-font);
 $JosefinSans-font: 'Josefin Sans', sans-serif;
 $Norito-font: 'Nurito', sans-serif;
  
@@ -17,4 +17,11 @@ $Norito-font: 'Nurito', sans-serif;
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+@mixin centering($topValue) {
+    position: absolute;
+    top: $topValue;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
