@@ -41,6 +41,26 @@ const menu = [
 ];
 
 export default function Gallery({label}: ButtonProps){
+   
+
+    // return(
+    //     <section className={styles.gallery}>
+    //                     {menu.map(item => {
+    //             console.log(item);
+    //             return(            <div className={styles.cardWrapper}>
+    //                 <div className={styles.card}>
+    //                     <div className={styles.cardOverlay}>
+    //                     <h1 className={styles.name}>Food Name</h1>
+    //                     <p className={styles.price}>$20.88</p>
+    //                         <Button label="Order Now"></Button>
+    //                     </div>
+    //                     <Image className={styles.image} src={'/gallery-img-1.jpeg'} width={800} height={450} alt={'gallery-img-1.jpeg'} />
+    //                     {/* <img src="gallery-img-1.jpeg" className={styles.img} /> */}
+    //                 </div>
+    //             </div>
+    //             )})}
+    //     </section>
+    // )
     return(
         <div className={styles.gallery}>
             {menu.map(item => {

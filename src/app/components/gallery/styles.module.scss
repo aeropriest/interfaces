@@ -19,7 +19,8 @@
                 left: 0;
                 @extend %fullSpace;
                 background-color: rgab($primary-color, .6);
-                color: $white-color;      
+                color: $white-color;  
+                @include flexLayout;    
                 z-index: 10;          
             }
 
