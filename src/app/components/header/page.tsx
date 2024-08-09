@@ -1,4 +1,4 @@
-import styles from "@/app/georgia.module.scss";
+import styles from "./styles.module.scss";
 import Logo from '@/app/components/logo'
 import Button from "@/app/components/button";
 
