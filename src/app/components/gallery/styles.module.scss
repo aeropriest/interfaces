@@ -1,0 +1,36 @@
+@import '@/app/variables.module.scss';
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+        .cardWrapper{
+            width: 33.3333%;
+        }
+        
+
+        .card{
+            width: 33.3333%;
+            height: 30vw;
+            position: relative;
+
+            &-overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                @extend %fullSpace;
+                background-color: rgab($primary-color, .6);
+                color: $white-color;      
+                z-index: 10;          
+            }
+
+            &-image{
+                border: 1px solid $secondary-color;
+                @extend %fullSpace;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                opacity: 0.5;
+            }
+        }
+}
+

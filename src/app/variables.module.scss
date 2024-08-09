@@ -2,6 +2,7 @@ $dark-color: #2c2c2c;
 $black-color: #000000;
 $primary-color: #d3ab55;
 $secondary-color: #bbb;
+$white-color:#ffffff;
 
 $dancingScript-font: var(--dancing-script-font);
 $JosefinSans-font: 'Josefin Sans', sans-serif;
@@ -24,4 +25,9 @@ $Norito-font: 'Nurito', sans-serif;
     top: $topValue;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+%fullSpace{
+    width: 100%;
+    height: 100%;
 }
