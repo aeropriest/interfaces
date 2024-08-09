@@ -1,9 +1,20 @@
 $dark-color: #2c2c2c;
 $black-color: #000000;
 $primary-color: #d3ab55;
+$secondary-color: #bbb;
+
+$dancingScript-font: var(--Dancing_Script);
+$JosefinSans-font: 'Josefin Sans', sans-serif;
+$Norito-font: 'Nurito', sans-serif;
  
-:export {
-  darkColor: $dark-color;
-  blackColor: $black-color;
-  primaryColor: $primary-color;
+@mixin textStyles{
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@mixin flexLayout{
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }

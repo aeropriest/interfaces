@@ -12,6 +12,8 @@
         top: 15%;
         left: 50%;
         transform: translate(-50%,-50%);
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -24,7 +26,9 @@
 }
 
 .mainName{
-    font-size: large;
+    font-size: 50px;
+    color: $secondary-color;
+    @include textStyles;
 }
 
 .subName{
