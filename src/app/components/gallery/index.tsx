@@ -38,6 +38,7 @@ const menu = [
         price: '$9.99',
         image: '/gallery-img-6.jpeg',
     },
+    
 ];
 
 export default function Gallery(){
