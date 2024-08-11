@@ -5,9 +5,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    // height: 100vh;
+    // width: 100vw;
     .text{
         font-size: x-large;
         color: $primary-color;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        background-color: $secondary-color;
+        border: 1px solid $black-color;
+        color: $black-color;
+        font-size: 30px;
+        font-weight: 200;
+        padding: 10px;
+    }
+    .title{
+        display: flex;
+        font-weight: bold;
+        width: 40%;
     }
 }
