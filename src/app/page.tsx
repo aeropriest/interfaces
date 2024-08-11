@@ -6,11 +6,12 @@ import { useInView } from 'react-intersection-observer'
 
 
 interface Post {
-  userId: number;
   id: number;
   title: string;
-  body: string;
+  description: string;
+  price: number;
 }
+
 export default function ChartSection() {
 
   const [rows,setRows] = useState<Post[]>([]);
@@ -21,7 +22,9 @@ export default function ChartSection() {
   useEffect(()=>{
     async function loadPosts(page: number){
       const data = await getPosts(page);      
-      setRows((prev) => [...prev, ...data]); // Append new data to existing rows
+      console.log('fetche data', typeof data, data);
+      const products = data.products || [];
+      setRows((prev) => [...prev, ...products]); // Append new data to existing rows
       console.log(rows);
     }
     loadPosts(page);
@@ -38,7 +41,8 @@ export default function ChartSection() {
   async function getPosts(param: number){
     try{
       console.log('in getPosts')
-      const data = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${param}&_limit=18`);
+      // const data = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${param}&_limit=18`);
+      const data = await fetch(`https://dummyjson.com/products`);
       return await data.json();  
   
     }catch(error: any){
@@ -54,12 +58,13 @@ export default function ChartSection() {
       {/* <SimpleBars /> */}
       <div>
       {
-          rows.map((row: any)=>{
+          rows.map((row: any, index)=>{
             return(
-            <div key={row.id} className={styles.row}>
+            <div key={index} className={styles.row}>
               <p className={styles.title}>{row.id}</p>
               <p className={styles.body}>{row.title}</p>
-              <p className={styles.body}>{row.body}</p>
+              <p className={styles.body}>{row.description}</p>
+              <p className={styles.body}>{row.price}</p>
             </div>            )
           })
       }
