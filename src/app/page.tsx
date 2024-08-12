@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import { useInView } from 'react-intersection-observer'
 import { faker, Faker } from '@faker-js/faker';
+import Product from '@/components/product/product';
+
 
 // https://www.youtube.com/watch?v=HptuMAUaNGk
 // https://www.youtube.com/watch?v=q-ylRxSxGcY
@@ -94,20 +96,23 @@ export default function ChartSection() {
   if( !rows){
     return (<section className={styles.main}><p>failed to load the data</p></section>)
   }
+  
   return (
     <section className={styles.main}>
       {/* <SimpleBars /> */}
-      <div>
+      <div >
       {
           rows.map((row: any, index)=>{
             console.log(row);
             return(
-            <div key={index} className={styles.row}>
-              <p className={styles.count}>{index}</p> 
-              <p className={styles.name}>{row.title}</p>
-              <p className={styles.body}>{row.description}</p>
-              <p className={styles.count}>${row.price}</p>
-            </div>            )
+              <Product props={{
+                      index,
+                      image: row.thumbnail,
+                      title: row.title,
+                      description: row.description,
+                      price: row.price,
+                    }}/>          
+                  )    
           })
       }
       </div>

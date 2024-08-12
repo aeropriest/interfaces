@@ -1,0 +1,33 @@
+@import '@/app/variables.module.scss';
+
+.row{
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    border-bottom: $black-color solid;
+    padding: 10px 10px;
+
+    .count{
+        padding: 10px;
+        // width: 10%;
+    }
+
+    .name{
+        font-weight: bold;
+        padding: 10px;
+        width: 20%;
+
+    }
+    .description{
+        padding: 10px;
+        width: 60%;
+    }
+
+    .price{
+        justify-content: flex-end;
+        display: flex;
+        font-size: 22px;
+        font-weight: bold;
+        width: 8%
+    }
+}

@@ -8,6 +8,9 @@ const __dirname = path.dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['cdn.dummyjson.com'],
+  },  
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
