@@ -13,7 +13,7 @@
     }
     .row{
         display: flex;
-        flex-direction: row;
+        // flex-direction: row;
         background-color: $secondary-color;
         border: 1px solid $black-color;
         color: $black-color;
@@ -21,9 +21,19 @@
         font-weight: 200;
         padding: 10px;
     }
-    .title{
+    .count{
+        padding: 10px;
+    }
+    .name{
         display: flex;
         font-weight: bold;
-        width: 40%;
+        // width: 40%;
+        // justify-content: start;
+        // align-items: start;
+        border: solid;
+    }
+
+    .detail{
+        border: solid;
     }
 }
