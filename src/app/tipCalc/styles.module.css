@@ -1,0 +1,29 @@
+.body{
+
+}
+
+.root {
+    display: flex;
+    background-color: lightgrey; 
+    width: 50%; /* Corrected 'fitContent' to 'fit-content' */
+    padding: 10px; 
+    border-radius: 10px; /* Corrected closing brace from '｝' to '}' */
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+
+.label {
+    display: block; 
+    font-weight: bold; /* Corrected closing brace from '｝' to '}' */
+}
+
+.input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px; /* Corrected closing brace from '｝' to '}' */
+}
+
+.p {
+    text-align: right; /* Corrected closing brace from '｝' to '}' */
+}

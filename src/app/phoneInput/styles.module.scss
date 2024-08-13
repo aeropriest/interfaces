@@ -1,0 +1,51 @@
+@import '@/app/variables.module.scss';
+
+.main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white ;
+    color: black;
+}
+
+
+
+.input:not([type="button"], [type="submit"]) {
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #828080;
+    font-size: 18px;
+    outline: none;
+}
+
+.button{
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #02203c;
+    color: white;
+    transition: 0.5s;
+}
+
+.button:disabled {
+    background-color: #cccccc; /* Change background color when disabled */
+    color: #666666; /* Change text color when disabled */
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+}
+
+// .button,
+// .input[type="button"],
+// input[type="submit"] {
+//     margin-left: 10px;
+//     cursor: pointer;
+//     padding: 12px;
+//     font-size: 16px;
+//     border-radius: 8px;
+//     background-color: #02203c;
+//     color: white;
+//     transition: 0.5s;
+// }

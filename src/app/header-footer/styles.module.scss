@@ -1,0 +1,63 @@
+@import '@/app/variables.module.scss';
+
+.body{
+    display: grid;
+    grid-template-columns: [left] 3fr [middle] 1fr [right];
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+    gap:10px
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr [left] 6fr [middle] 1fr [right];
+    grid-template-areas:
+    "companylogo navlinks usericon";
+    grid-area: header;
+}
+
+.logo {
+    // grid-column: 1; /* Logo in the first column */
+    grid-area: companylogo;
+}
+
+.menu {
+    // grid-column: 2; /* Menu in the second column */
+    grid-area: navlinks;
+    grid-column: 2; /* Menu in the second column */
+    ul {
+        display: flex; /* Use flexbox for the menu */
+        list-style-type: none; /* Remove default list styles */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        li {
+            margin-right: 20px; /* Add spacing between menu items */
+        }
+        justify-content: center;
+    }    
+}
+
+.userIcon {
+    // grid-column: 3; /* User icon in the third column */
+    grid-area: usericon;
+}
+
+.main{
+    grid-area: main;
+}
+
+.aside{
+    grid-area: aside;
+}
+
+.footer
+{
+    grid-area: footer;
+}
+
+.body > *{
+    border: 5px solid lightblue;
+}

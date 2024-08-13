@@ -54,7 +54,6 @@ const fakeProducts = generateFakeProducts(20);
 
 export default function ChartSection() {
 
-
   console.log(fakeProducts);
   
   const [rows,setRows] = useState<Post[]>([]);
