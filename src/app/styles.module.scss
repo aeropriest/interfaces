@@ -1,13 +1,7 @@
 @import '@/app/variables.module.scss';
 
 .main{
-    background-color: black;
+    background-color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    .text{
-        font-size: x-large;
-        color: $primary-color;
-    }
+    flex-wrap: wrap;
 }
