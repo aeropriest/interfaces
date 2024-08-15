@@ -4,13 +4,15 @@ import styles from './styles.module.scss'
 
 const WORD_LIST_API_URL = 'api/wordle';
 
+const WORD_LENGTH = 5;
+const GUESS_LENGTH = 6;
 
 const Wordle = () => {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const [targetWord, setTargetWord] = useState('');
-  const [matchedWord, setMatchedWord] = useState('');
-  const [error, setError] = useState(false)
-  const [filled, setFilled] = useState(0);
+  const [guesses, setGuesses] = useState(Array(GUESS_LENGTH).fill(null));
+  const [guess, setGuess] = useState('')
   useEffect(() => {
     try {
       setLoading(true);
@@ -23,28 +25,27 @@ const Wordle = () => {
       setLoading(false);
     } catch (error: any) {
       console.log(error);
+
     } finally {
       setLoading(false);
     }
   }, [])
 
-  const handleKeyUp = (event: any) => {
-    console.log(event.key);
-    const ascii = event.key.charCodeAt(0)
-    const isAlphabet = /^[A-Za-z]$/.test(event.key);
-    if (isAlphabet && filled < 5) {
-      // if (event.key === targetWord[filled]) {
-      //   setMatchedWord((prev) => prev + event.key);
-      // }
-      setMatchedWord((prev) => prev + event.key);
-      console.log(matchedWord);
-    }
-    if (ascii === 66) {
-      setMatchedWord((prev) => prev.slice(0, -1));
+  const onPressKey = (event: KeyboardEvent) => {
+    if (/^[a-zA-Z]$/.test(event.key)) {
+      console.log('Char pressed ', event.key);
+      setGuess((prev) => prev + event.key);
+    } else if (event.key === 'Backspace') {
+      console.log('Backspace pressed');
+    } else if (event.key === 'Enter') {
+      console.log('Enter pressed');
     }
 
-    console.log(`Key pressed: ${ascii}`);
-  };
+  }
+  useEffect(() => {
+    window.addEventListener('keydown', onPressKey)
+    return () => window.removeEventListener('keydown', onPressKey);
+  }, [])
 
   if (error)
     return <div className={styles.main}>Error occured fetching words</div>
@@ -52,24 +53,61 @@ const Wordle = () => {
   if (error)
     return <div className={styles.main}>Loading the game...</div>
 
-  const tileStyle = (i: number) => {
-    if (!matchedWord[i])
-      return styles.tile;
-
-    return styles.tile + matchedWord[i] === targetWord[i] ? styles.correct : styles.incorrect;
-  }
   return (
-    <div className={styles.main} tabIndex={0} onKeyUp={handleKeyUp}>
+    <div className={styles.main}>
+      <div>{guess}</div>
       <div className={styles.board}>
-        <div className={styles.line}>Target: {targetWord} Matched: {matchedWord}</div>
         <div className={styles.line}>
-          {[0, 1, 2, 3, 4].map(i => (
-            // <div key={i} className={`${matchedWord[i] === targetWord[i] ? styles.correct : styles.incorrect}`}>{matchedWord[i]}</div>
-            <div key={i} className={`${tileStyle(i)}`}>{matchedWord[i]}</div>
-          ))}
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+
+        </div>
+        <div className={styles.line}>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+          <div className={styles.tile}>
+            A
+          </div>
+
         </div>
       </div>
-    </div >
+    </div>
+
   );
 };
 
