@@ -21,11 +21,8 @@ const Quiz = () => {
     fetchData();
   }, []);
 
-  const handleAnswer = (event: any) => {
-    console.log(event.data, event);
-  }
-
   const question = questions[counter];
+  
   return (
     <>
       {question && (

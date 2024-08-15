@@ -7,7 +7,7 @@ const HomePage = ({ coins }) => {
         <div>
             <h1>Crypto Coins</h1>
             <ul>
-                {coins.map(coin => (
+                {coins && coins.map((coin: any) => (
                     <li key={coin.id}>
                         {coin.name}: ${coin.current_price}
                     </li>
