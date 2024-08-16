@@ -1,34 +1,49 @@
 @import '@/app/variables.module.scss';
 
+.change{
+    display: flex;
+    background-color: rgba(255,0,0,0.2);
+    padding: 5px 10px;
+    font-size: 0.6rem;
+    border-radius: 5px;
+    justify-content: end;
+    color: red;
+}
+
 .row{
     display: flex;
     width: 100%;
     padding: 10px 20px;
+    font-size: 0.8rem;    
     .text {
+        display: flex;
         color: white;
         width: 25%;
-    }    
+        justify-content: start;
+    }
     .numbers {
+        display: flex;
         color: white;
-        text-align: right;
         width: 25%;
-    }    
+        // border: 1px white solid;
+        justify-content: end;
+        font-size: 0.7rem;
+    }
+
 }
 
 .header{
     display: flex;
     width: 100%;
     padding: 15px 20px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    color: gray;
-    font-size: smaller;
+    font-size: 0.7rem;
     font-weight: bolder;
+    margin-top: 10px;
     .text {
         width: 25%;
     }    
     .numbers {
         text-align: right;
         width: 25%;
-    }    
+    }
 }

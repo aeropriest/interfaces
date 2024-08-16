@@ -109,7 +109,11 @@ const Table = ({ tokens }: any) => {
                 <div className={styles.text}>{item.name}</div>
                 <div className={styles.numbers}>{item.price}</div>
                 <div className={styles.numbers}>{item.amount}</div>
-                <div className={styles.numbers}>{item.changeToday}</div>
+                <div className={styles.numbers}>
+                    <div className={styles.change}>
+                        {item.changeToday} %
+                    </div>
+                </div>
                 <div className={styles.numbers}>{item.avgBuy}</div>
                 <div className={styles.numbers}>{item.total}</div>
                 <div className={styles.numbers}>{item.totalChange}</div>

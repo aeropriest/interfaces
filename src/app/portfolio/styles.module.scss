@@ -92,38 +92,8 @@
                 font-weight: 100;
                 color: gray;
                 background-color: rgba(100,100,100,0.2);
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;               
-                .table{
-                    display: flex; /* Use flexbox for the row */
-                    flex-direction: column; 
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;               
-                    padding: 10px;
-
-                .top{
-                        border-top-left-radius: 10px;
-                        border-top-right-radius: 10px;               
-                        display: flex; /* Use flexbox for the row */
-                        justify-content: space-between; /* Spread items evenly in the row */
-                        align-items: center; 
-                        padding-top: 10px; 
-                        padding-bottom: 10px;
-                    }
-                    .row{
-                        display: flex; /* Use flexbox for the row */
-                        justify-content: space-between; /* Spread items evenly in the row */
-                        align-items: center; 
-                        padding-top: 8px; 
-                        padding-bottom: 8px;
-                        color: white;
-                        font-size: 0.8rem;
-                        .right{
-                            align-items: right;
-                        }
-                        }
-
-                }
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;                               
             }
         }        
     }
