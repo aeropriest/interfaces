@@ -16,7 +16,7 @@ const tokens = [
         "name": "Bitcoin",
         "symbol": "BTC",
         "amount": 21000000,
-        "24HourChange": 1.2,
+        "changeToday": 1.2,
         "price": 29500,
         "averageBuyPrice": 10000,
         "total": 620500000000,
@@ -27,7 +27,7 @@ const tokens = [
         "name": "Ethereum",
         "symbol": "ETH",
         "amount": 120000000,
-        "24HourChange": 3.5,
+        "changeToday": 3.5,
         "price": 1800,
         "averageBuyPrice": 500,
         "total": 216000000000,
@@ -38,7 +38,7 @@ const tokens = [
         "name": "Tether",
         "symbol": "USDT",
         "amount": 78000000000,
-        "24HourChange": -0.1,
+        "changeToday": -0.1,
         "price": 1,
         "averageBuyPrice": 1,
         "total": 78000000000,
@@ -49,7 +49,7 @@ const tokens = [
         "name": "USD Coin",
         "symbol": "USDC",
         "amount": 55000000000,
-        "24HourChange": -0.2,
+        "changeToday": -0.2,
         "price": 1,
         "averageBuyPrice": 1,
         "total": 55000000000,
@@ -60,7 +60,7 @@ const tokens = [
         "name": "Binance Coin",
         "symbol": "BNB",
         "amount": 200000000,
-        "24HourChange": 2.8,
+        "changeToday": 2.8,
         "price": 310,
         "averageBuyPrice": 20,
         "total": 62000000000,
@@ -71,7 +71,7 @@ const tokens = [
         "name": "XRP",
         "symbol": "XRP",
         "amount": 100000000000,
-        "24HourChange": 0.9,
+        "changeToday": 0.9,
         "price": 0.5,
         "averageBuyPrice": 0.1,
         "total": 50000000000,
@@ -82,7 +82,7 @@ const tokens = [
         "name": "Cardano",
         "symbol": "ADA",
         "amount": 45000000000,
-        "24HourChange": 1.5,
+        "changeToday": 1.5,
         "price": 0.55,
         "averageBuyPrice": 0.05,
         "total": 24750000000,
@@ -93,7 +93,7 @@ const tokens = [
         "name": "Dogecoin",
         "symbol": "DOGE",
         "amount": 132000000000,
-        "24HourChange": 2.2,
+        "changeToday": 2.2,
         "price": 0.07,
         "averageBuyPrice": 0.01,
         "total": 9240000000,
@@ -113,7 +113,7 @@ const Portfolio = () => {
             <div className={styles.main}>
                 <div className={styles.navigation}>
                     <div className={styles.wallets}>
-                        <div className={styles.icon}><FaWallet /></div>
+                        <div className={styles.walleticon}><FaWallet /></div>
                         <div>Wallets</div>
                     </div>
                     <Navbar items={[
@@ -172,11 +172,8 @@ const Portfolio = () => {
                     </div>
                     <div className={styles.portfolio}>
                         <div className={styles.table}>
-                            <div className={styles.left}>
-                                <p></p>
-                                <p className={styles.name}>Name</p>
-                            </div>
-                            <div className={styles.right}>
+                            <div className={styles.top}>
+                                <p>Name</p>
                                 <p>Amount</p>
                                 <p>24 Change</p>
                                 <p>Price</p>
@@ -184,6 +181,18 @@ const Portfolio = () => {
                                 <p>Total</p>
                                 <p>All Time</p>
                             </div>
+                            {tokens && tokens.map((token: any, index: any) => {
+                                return (
+                                    <div className={styles.row}>
+                                        <p className={styles.text}>{token.name}</p>
+                                        <p className={styles.right}>{token.amount}</p>
+                                        <p className={styles.right}>{token.changeToday}</p>
+                                        <p className={styles.right}>{token.averageBuyPrice}</p>
+                                        <p className={styles.right}>{token.total}</p>
+                                        <p className={styles.right}>{token.allTimeChange}</p>
+                                    </div>)
+                            })}
+
                         </div>
                     </div>
                 </div>
