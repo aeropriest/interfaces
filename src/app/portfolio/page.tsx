@@ -7,9 +7,14 @@ import { MdAnalytics } from "react-icons/md";
 import { TbCirclesFilled } from "react-icons/tb";
 import { RiNftFill } from "react-icons/ri";
 import { AiOutlineTransaction } from "react-icons/ai";
-import { AiOutlineSwap } from "react-icons/ai";
 import { IoIosSettings } from "react-icons/io";
+import { AiOutlineSwap } from "react-icons/ai";
+import { IoQrCodeOutline } from "react-icons/io5";
+import { CiWallet } from "react-icons/ci";
+
 import Table from '../components/table/page';
+import Header from '../components/header/page';
+import Button from '../components/button/page';
 
 const tokens = [
     {
@@ -104,13 +109,7 @@ const tokens = [
 const Portfolio = () => {
     return (
         <div className={styles.body}>
-            <div className={styles.header}>
-                <div className={styles.logo}>logo here</div>
-                <div className={styles.menus}>menus</div>
-                <div className={styles.search}>search</div>
-                <div className={styles.settings}>settings</div>
-                <div className={styles.user}>user</div>
-            </div>
+            <Header />
             <div className={styles.main}>
                 <div className={styles.navigation}>
                     <div className={styles.wallets}>
@@ -158,9 +157,9 @@ const Portfolio = () => {
                 <div className={styles.submain}>
                     <div className={styles.activity}>Dashboard</div>
                     <div className={styles.actions}>
-                        <button className={styles.cleanButton}>Receive</button>
-                        <button className={styles.cleanButton}>Buy</button>
-                        <button className={styles.cleanButton}>Swap</button>
+                        <Button caption='Receive'><IoQrCodeOutline /></Button>
+                        <Button caption='Buy'><CiWallet /></Button>
+                        <Button caption='Swap'><AiOutlineSwap /></Button>
                     </div>
                     <div className={styles.snapshot}>
                         <p className={styles.caption}>Total Worth  :</p>
