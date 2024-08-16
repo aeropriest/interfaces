@@ -1,0 +1,143 @@
+
+@import '@/app/variables.module.scss';
+@import '@/app/variables.module.scss';
+
+.body{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    height: 100vh;
+    background-color: black;
+    .main{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        .navigation{
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 200px;
+            padding-left: 10px;
+            .wallets{
+                display: flex;
+                background-color: rgba(100,100,100,0.5);
+                padding: 10px 0 10px 0;
+                border-radius: 20px;
+                align-items: center;
+                margin-left: -10px;                
+                gap: 10px;
+            }
+            .icon{
+                margin-left: 10px;                
+            }
+        }
+        .submain{
+            width: 100%;
+            
+            margin: 1rem;
+            .activity{
+                font-weight:bolder;
+                font-size: 2.5rem;
+            }
+            .actions{
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                                
+            }
+            .snapshot{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                .caption{
+                    color: gray;
+                    font-weight: 100;
+                    font-size: 1rem;
+                    gap: 10px;
+                }
+                .total{
+                    font-weight: 900;
+                    font-size: 1.5rem;
+                }
+                .change{
+                    display: flex;
+                    gap: 10px;
+                    font-size: 0.8rem;
+                    align-items: center;
+                    .absolute{
+                        color: green;
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                    .percent{
+                        color: green;
+                    }
+                    .period{
+                        border-radius: 2px;
+                        // padding-left: 2px;
+                        // padding-right: 2px;
+                        padding: 0 5px 0 5px;
+                        border: gray solid 1px;
+                        font-size: 0.6rem;
+                        color: gray;
+                    }
+                }
+            }
+            .portfolio{
+                margin-top: 10px;
+                height: 100%;
+                font-size: 0.7rem;
+                font-weight: 100;
+                color: gray;
+                background-color: rgba(100,100,100,0.2);
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                .table{
+                    width: 100%;
+                    display: flex;
+                    justify-content:space-between;
+                    padding-right: 20px;
+                    height: 50px;
+                    
+                    gap: 20px;
+                    align-items: center;
+                    .left{
+                        width: 20%;
+                        padding-left: 10px;
+                    }
+                    .right{
+                        display: flex;
+                        width: 80%;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }        
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+        margin: 1rem;
+        
+        .logo{
+            border: 1px solid black;
+        }
+        .menus{
+            border: 1px solid black;
+        }
+        .search{
+            border: 1px solid black;
+        }
+        .settings{
+            border: 1px solid black;
+        }
+        .user{
+            border: 1px solid black;
+        }        
+    }
+
+}

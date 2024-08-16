@@ -1,0 +1,16 @@
+
+@import '@/app/variables.module.scss';
+@import '@/app/variables.module.scss';
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .navItem{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 30px;
+        gap: 10px
+    }
+}
