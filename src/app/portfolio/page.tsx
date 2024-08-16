@@ -9,6 +9,7 @@ import { RiNftFill } from "react-icons/ri";
 import { AiOutlineTransaction } from "react-icons/ai";
 import { AiOutlineSwap } from "react-icons/ai";
 import { IoIosSettings } from "react-icons/io";
+import Table from '../components/table/page';
 
 const tokens = [
     {
@@ -18,9 +19,9 @@ const tokens = [
         "amount": 21000000,
         "changeToday": 1.2,
         "price": 29500,
-        "averageBuyPrice": 10000,
+        "avgBuy": 10000,
         "total": 620500000000,
-        "allTimeChange": 1000
+        "totalChange": 1000
     },
     {
         "image": "https://example.com/ethereum.png",
@@ -29,9 +30,9 @@ const tokens = [
         "amount": 120000000,
         "changeToday": 3.5,
         "price": 1800,
-        "averageBuyPrice": 500,
+        "avgBuy": 500,
         "total": 216000000000,
-        "allTimeChange": 500
+        "totalChange": 500
     },
     {
         "image": "https://example.com/tether.png",
@@ -40,9 +41,9 @@ const tokens = [
         "amount": 78000000000,
         "changeToday": -0.1,
         "price": 1,
-        "averageBuyPrice": 1,
+        "avgBuy": 1,
         "total": 78000000000,
-        "allTimeChange": 0
+        "totalChange": 0
     },
     {
         "image": "https://example.com/usd-coin.png",
@@ -51,9 +52,9 @@ const tokens = [
         "amount": 55000000000,
         "changeToday": -0.2,
         "price": 1,
-        "averageBuyPrice": 1,
+        "avgBuy": 1,
         "total": 55000000000,
-        "allTimeChange": 0
+        "totalChange": 0
     },
     {
         "image": "https://example.com/binance-coin.png",
@@ -62,9 +63,9 @@ const tokens = [
         "amount": 200000000,
         "changeToday": 2.8,
         "price": 310,
-        "averageBuyPrice": 20,
+        "avgBuy": 20,
         "total": 62000000000,
-        "allTimeChange": 1450
+        "totalChange": 1450
     },
     {
         "image": "https://example.com/xrp.png",
@@ -73,9 +74,9 @@ const tokens = [
         "amount": 100000000000,
         "changeToday": 0.9,
         "price": 0.5,
-        "averageBuyPrice": 0.1,
+        "avgBuy": 0.1,
         "total": 50000000000,
-        "allTimeChange": 400
+        "totalChange": 400
     },
     {
         "image": "https://example.com/cardano.png",
@@ -84,9 +85,9 @@ const tokens = [
         "amount": 45000000000,
         "changeToday": 1.5,
         "price": 0.55,
-        "averageBuyPrice": 0.05,
+        "avgBuy": 0.05,
         "total": 24750000000,
-        "allTimeChange": 1000
+        "totalChange": 1000
     },
     {
         "image": "https://example.com/dogecoin.png",
@@ -95,9 +96,9 @@ const tokens = [
         "amount": 132000000000,
         "changeToday": 2.2,
         "price": 0.07,
-        "averageBuyPrice": 0.01,
+        "avgBuy": 0.01,
         "total": 9240000000,
-        "allTimeChange": 600
+        "totalChange": 600
     }
 ]
 const Portfolio = () => {
@@ -164,36 +165,14 @@ const Portfolio = () => {
                     <div className={styles.snapshot}>
                         <p className={styles.caption}>Total Worth  :</p>
                         <p className={styles.total}>$800,000.80</p>
-                        <p className={styles.change}>
+                        <div className={styles.change}>
                             <p className={styles.absolute}>+8000.80</p>
                             <p className={styles.percent}>+80.80</p>
                             <p className={styles.period}>1W</p>
-                        </p>
+                        </div>
                     </div>
                     <div className={styles.portfolio}>
-                        <div className={styles.table}>
-                            <div className={styles.top}>
-                                <p>Name</p>
-                                <p>Amount</p>
-                                <p>24 Change</p>
-                                <p>Price</p>
-                                <p>Avg Buy</p>
-                                <p>Total</p>
-                                <p>All Time</p>
-                            </div>
-                            {tokens && tokens.map((token: any, index: any) => {
-                                return (
-                                    <div className={styles.row}>
-                                        <p className={styles.text}>{token.name}</p>
-                                        <p className={styles.right}>{token.amount}</p>
-                                        <p className={styles.right}>{token.changeToday}</p>
-                                        <p className={styles.right}>{token.averageBuyPrice}</p>
-                                        <p className={styles.right}>{token.total}</p>
-                                        <p className={styles.right}>{token.allTimeChange}</p>
-                                    </div>)
-                            })}
-
-                        </div>
+                        <Table tokens={tokens} />
                     </div>
                 </div>
             </div>
