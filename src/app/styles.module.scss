@@ -129,7 +129,7 @@
         width: 50%;
         flex-wrap: wrap;
         // padding: 180px 0 80px 0;
-        gap: 50px 80px;
+        gap: 50px 50px;
         justify-content: center;
         .wallet{
             display: flex;
@@ -141,6 +141,28 @@
 
         }
     }    
+    .trending{
+        width: 80%;
+        .blurred {
+            background-color: purple;
+            filter: blur(150.58px);
+            position: absolute;
+            top: 70%;                  // Center vertically
+            left: 60%;                 // Center horizontally
+            width: 35%;               // Full width (or adjust as needed)
+            height: 35%;              // Full height (or adjust as needed)
+            transform: translate(-50%, -50%); // Adjust to center the div
+            // z-index: 1;               // Adjust z-index to place it behind other content
+        }       
+        .header{
+            font-weight: 900;
+            font-size: 3rem;            
+            @include text-gradient;
+            margin-bottom: 50px;
+            text-transform: capitalize;
+            justify-content: center;
+        }
+    }
 }
 
 
