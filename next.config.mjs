@@ -20,7 +20,7 @@ const nextConfig = {
         pathname: "/ipfs/**",
       },
     ],
-    domains: ["www.larvalabs.com", "ipfs.io"], // Add the domain here
+    domains: ["www.larvalabs.com", "ipfs.io", "openseauserdata.com"], // Add the domain here
   },
   // Other Next.js config options...
 };
