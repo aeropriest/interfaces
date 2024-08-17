@@ -1,6 +1,9 @@
 import React from 'react';
 import Tabs from '../components/tabs/page';
 import Table from '../components/table/page';
+import { IoBarChart } from "react-icons/io5";
+import { PiSpeedometerFill } from "react-icons/pi";
+import { GiTwoCoins } from "react-icons/gi";
 
 const Analytics = () => {
     const AssetAllocation = () => {
@@ -28,14 +31,21 @@ const Analytics = () => {
         <div className="styles.body">
             <Tabs pages={[
                 {
-                    title: 'Asset Allocation', tab: <AssetAllocation />,
+                    title: 'Asset Allocation',
+                    tab: <AssetAllocation />,
+                    button: <GiTwoCoins />
                 },
                 {
-                    title: 'Portfolio Performance', tab: <PortfolioPerformance />
+                    title: 'Portfolio Performance',
+                    tab: <PortfolioPerformance />,
+                    button: <IoBarChart />,
 
                 },
                 {
-                    title: 'Wallet Analyzer', tab: <WalletAnalyzer />,
+                    title: 'Wallet Analyzer',
+                    tab: <WalletAnalyzer />,
+                    button: <PiSpeedometerFill />,
+
                 },
             ]}
             />

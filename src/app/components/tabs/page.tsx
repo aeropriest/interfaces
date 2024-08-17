@@ -10,9 +10,10 @@ const Tabs = ({ pages }: any) => {
         <div className={styles.main}>
             <div className={styles.tabs}>
                 {pages && pages.map((page: any, index: number) => {
+                    console.log(page)
                     return (
-                        <button
-                            className={styles.tab}
+                        <div
+                            className={`${styles.tab} ${index === activeIndex ? styles.active : ''}`}
                             key={index}
                             onClick={() => {
                                 console.log('new index ', index);
@@ -20,15 +21,18 @@ const Tabs = ({ pages }: any) => {
                                 setActiveIndex(index);
                             }}
                         >
-                            {page.title}
-                        </button>
+                            <div className={styles.icon}>
+                                {page.button}
+                            </div>
+                            <div> {page.title}</div>
+                        </div>
                     )
                 })}
             </div>
             <div className={styles.page}>
                 {pages[activeIndex].tab}
             </div>
-        </div>
+        </div >
     );
 };
 
