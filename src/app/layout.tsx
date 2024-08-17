@@ -27,7 +27,16 @@ export default function RootLayout({
             <div className={styles.navbar}>
               <Navbar />
             </div>
-            <div className={styles.panel}>
+            {/* <div style={{
+              width: '100%',
+              margin: '1rem',
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%',
+              overflowY: 'auto',
+              // backgroundColor: 'red',
+            }}> */}
+            <div className={styles.main}>
               {children}
             </div>
           </div>

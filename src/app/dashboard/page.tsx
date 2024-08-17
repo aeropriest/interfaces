@@ -182,7 +182,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className={styles.portfolio}>
-                    <Table tokens={tokens} />
+                    {/* <Table tokens={tokens} /> */}
                 </div>
             </div>
         </div>

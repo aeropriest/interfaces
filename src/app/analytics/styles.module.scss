@@ -3,7 +3,14 @@
 @import '@/app/variables.module.scss';
 
 .body{
+    display: flex;
+    flex-direction: row;
     font-family: "Poppins", sans-serif;
     color: white;
+<<<<<<< Updated upstream
     height: 100vh;
+=======
+    width: 100%;
+    background-color: black;
+>>>>>>> Stashed changes
 }

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import React from 'react';
 
 const NftInfo = ({ metadata }: any) => {
-    return (<div>show nft here</div>)
     return (
         <>
             <div className={styles.main}>
