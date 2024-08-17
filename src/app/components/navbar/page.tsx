@@ -17,7 +17,7 @@ const items = [
     {
         "icon": <MdDashboard />,
         "label": "Dashboard",
-        "path": "/"
+        "path": "/dashboard"
     },
     {
         "icon": <MdAnalytics />,

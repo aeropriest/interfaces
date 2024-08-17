@@ -27,18 +27,12 @@ export default function RootLayout({
             <div className={styles.navbar}>
               <Navbar />
             </div>
-            <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              width: '100%',
-              height: '100%',
-              overflowY: 'auto', // Enable vertical scrolling for the main content
-            }}>
+            <div className={styles.panel}>
               {children}
             </div>
           </div>
         </div>
       </body>
-    </html>
+    </html >
   );
 }
