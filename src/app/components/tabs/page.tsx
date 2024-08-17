@@ -5,19 +5,18 @@ import React, { useState } from 'react';
 
 const Tabs = ({ pages }: any) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    console.log('change the page ', activeIndex);
     return (
         <div className={styles.main}>
             <div className={styles.tabs}>
                 {pages && pages.map((page: any, index: number) => {
-                    console.log(page)
+                    // console.log(page)
                     return (
                         <div
                             className={`${styles.tab} ${index === activeIndex ? styles.active : ''}`}
                             key={index}
                             onClick={() => {
-                                console.log('new index ', index);
-                                console.log('pages are ', pages);
+                                // console.log('new index ', index);
+                                // console.log('pages are ', pages);
                                 setActiveIndex(index);
                             }}
                         >
