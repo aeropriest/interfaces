@@ -1,7 +1,9 @@
+import styles from './styles.module.scss'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Dancing_Script, Josefin_Sans, Nunito } from 'next/font/google';
-
+import Navbar from "./components/navbar/page";
+import Header from "./components/header/page";
 import "./globals.scss";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,8 +19,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">      
-      <body className={inter.className}>{children}</body>
+    <html lang="en">
+      <body className={inter.className}>
+        <div className={styles.layout}>
+          <div><Header /></div>
+          <div className={styles.middle}>
+            <div className={styles.navbar}>
+              <Navbar />
+            </div>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              width: '100%',
+              height: '100%',
+              overflowY: 'auto', // Enable vertical scrolling for the main content
+            }}>
+              {children}
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

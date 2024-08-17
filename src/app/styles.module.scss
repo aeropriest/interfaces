@@ -1,4 +1,3 @@
-
 @import '@/app/variables.module.scss';
 
 .body{
@@ -164,5 +163,32 @@
     }
 }
 
+.layout{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .header{
+        display: flex;
+        flex-grow: 1;
+        overflow-y: 'auto';
+    }
+    .middle{
+        display: flex;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        min-width: 200px;
+    }
 
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+}
 

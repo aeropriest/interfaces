@@ -2,20 +2,34 @@
 @import '@/app/variables.module.scss';
 @import '@/app/variables.module.scss';
 
+.body{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    height: 100vh;
+    background-color: black;
     .main{
         display: flex;
         flex-direction: row;
-        font-family: "Poppins", sans-serif;
-        color: white;
-        width: 100%;
-        background-color: black;
-            .navigation{
+        height: 100%;
+        .navigation{
             margin: 1rem;
             display: flex;
             flex-direction: column;
             gap: 30px;
             width: 200px;
             padding-left: 10px;
+            .wallets{
+                display: flex;
+                background-color: rgba(100,100,100,0.5);
+                padding: 10px 0 10px 0;
+                border-radius: 20px;
+                align-items: center;
+                margin-left: -10px;                
+                gap: 10px;                
+            }
+            .walleticon{
+                margin-left: 20px;                
+            }
         }
         .submain{
             width: 100%;
@@ -73,13 +87,13 @@
             }
             .portfolio{
                 margin-top: 10px;
+                height: 100%;
                 font-size: 0.7rem;
                 font-weight: 100;
                 color: gray;
                 background-color: rgba(100,100,100,0.2);
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;                               
-                overflow-y: auto;
             }
         }        
     }
@@ -106,3 +120,5 @@
             border: 1px solid black;
         }        
     }
+
+}

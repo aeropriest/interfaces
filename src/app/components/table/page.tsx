@@ -93,8 +93,7 @@ const tokens = [
 ]
 
 const Table = ({ tokens }: any) => {
-    console.log(tokens);
-    return (<div>
+    return (<div className={styles.table}>
         <div className={styles.header}>
             <div className={styles.text}>Name</div>
             <div className={styles.numbers}>Amount</div>

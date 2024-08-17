@@ -104,75 +104,85 @@ const tokens = [
         "avgBuy": 0.01,
         "total": 9240000000,
         "totalChange": 600
+    },
+    // Additional coins
+    {
+        "image": "https://example.com/solana.png",
+        "name": "Solana",
+        "symbol": "SOL",
+        "amount": 500000000,
+        "changeToday": 5.0,
+        "price": 45,
+        "avgBuy": 30,
+        "total": 22500000000,
+        "totalChange": 2000
+    },
+    {
+        "image": "https://example.com/polkadot.png",
+        "name": "Polkadot",
+        "symbol": "DOT",
+        "amount": 1000000000,
+        "changeToday": 4.1,
+        "price": 8,
+        "avgBuy": 5,
+        "total": 8000000000,
+        "totalChange": 400
+    },
+    {
+        "image": "https://example.com/chainlink.png",
+        "name": "Chainlink",
+        "symbol": "LINK",
+        "amount": 500000000,
+        "changeToday": 3.0,
+        "price": 25,
+        "avgBuy": 12,
+        "total": 12500000000,
+        "totalChange": 800
+    },
+    {
+        "image": "https://example.com/litecoin.png",
+        "name": "Litecoin",
+        "symbol": "LTC",
+        "amount": 84000000,
+        "changeToday": 2.5,
+        "price": 150,
+        "avgBuy": 50,
+        "total": 12600000000,
+        "totalChange": 500
+    },
+    {
+        "image": "https://example.com/stellar.png",
+        "name": "Stellar",
+        "symbol": "XLM",
+        "amount": 50000000000,
+        "changeToday": 1.8,
+        "price": 0.12,
+        "avgBuy": 0.05,
+        "total": 6000000000,
+        "totalChange": 300
     }
-]
+];
 const Portfolio = () => {
     return (
-        <div className={styles.body}>
-            <Header />
-            <div className={styles.main}>
-                <div className={styles.navigation}>
-                    <div className={styles.wallets}>
-                        <div className={styles.walleticon}><FaWallet /></div>
-                        <div>Wallets</div>
-                    </div>
-                    <Navbar items={[
-                        {
-                            "icon": <MdDashboard />,
-                            "label": "Dashboard",
-                            "path": "/"
-                        },
-                        {
-                            "icon": <MdAnalytics />,
-                            "label": "Analytics",
-                            "path": "/analytics"
-                        },
-                        {
-                            "icon": <TbCirclesFilled />,
-                            "label": "Assets",
-                            "path": "/assets"
-                        },
-                        {
-                            "icon": <RiNftFill />,
-                            "label": "NFTs",
-                            "path": "/nfts"
-                        },
-                        {
-                            "icon": <AiOutlineTransaction />,
-                            "label": "Transactions",
-                            "path": "/transactions"
-                        },
-                        {
-                            "icon": <AiOutlineSwap />,
-                            "label": "Swap",
-                            "path": "/swap"
-                        },
-                        {
-                            "icon": <IoIosSettings />,
-                            "label": "Settings",
-                            "path": "/settings"
-                        }
-                    ]} />
+        <div className={styles.main}>
+            <div className={styles.submain}>
+                <div className={styles.activity}>Dashboard</div>
+                <div className={styles.actions}>
+                    <Button caption='Receive' icon={<IoQrCodeOutline />}><IoQrCodeOutline /></Button>
+                    <Button caption='Buy' icon={<CiWallet />} />
+                    <Button caption='Swap' icon={<AiOutlineSwap />} />
                 </div>
-                <div className={styles.submain}>
-                    <div className={styles.activity}>Dashboard</div>
-                    <div className={styles.actions}>
-                        <Button caption='Receive'><IoQrCodeOutline /></Button>
-                        <Button caption='Buy'><CiWallet /></Button>
-                        <Button caption='Swap'><AiOutlineSwap /></Button>
+                <div className={styles.snapshot}>
+                    <p className={styles.caption}>Total Worth  :</p>
+                    <p className={styles.total}>$800,000.80</p>
+                    <div className={styles.change}>
+                        <p className={styles.absolute}>+8000.80</p>
+                        <p className={styles.percent}>+80.80</p>
+                        <p className={styles.period}>1W</p>
                     </div>
-                    <div className={styles.snapshot}>
-                        <p className={styles.caption}>Total Worth  :</p>
-                        <p className={styles.total}>$800,000.80</p>
-                        <div className={styles.change}>
-                            <p className={styles.absolute}>+8000.80</p>
-                            <p className={styles.percent}>+80.80</p>
-                            <p className={styles.period}>1W</p>
-                        </div>
-                    </div>
-                    <div className={styles.portfolio}>
-                        <Table tokens={tokens} />
-                    </div>
+                </div>
+                <div className={styles.portfolio}>
+                    <Table tokens={tokens} />
                 </div>
             </div>
         </div>

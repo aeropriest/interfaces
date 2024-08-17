@@ -4,14 +4,8 @@ import React from 'react';
 const Button = (props: any) => {
     return (
         <div className={styles.main}>
-            <div>
-                {props.children}
-            </div>
-            <p></p>
-            <div>
-                {props.caption}
-            </div>
-
+            <div className={styles.icon}>{props.icon}</div>
+            {props.caption}
         </div>
     );
 };

@@ -1,5 +1,10 @@
 @import '@/app/variables.module.scss';
 
+.table{
+    display: flex;
+    flex-direction: column;
+    height: 5%;
+}
 .change{
     display: flex;
     background-color: rgba(255,0,0,0.2);
