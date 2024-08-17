@@ -3,12 +3,12 @@ import Image from 'next/image';
 import React from 'react';
 
 const NftInfo = ({ metadata }: any) => {
-    console.log('The metadata', metadata);
+    return (<div>show nft here</div>)
     return (
         <>
             <div className={styles.main}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    <Image className={styles.image} src={metadata.image} height={200} width={220} alt={metadata.name} />
+                    {/* <Image className={styles.image} src={metadata.image} height={200} width={220} alt={metadata.name} /> */}
                     <p style={{
                         fontWeight: 'bold',
                         fontSize: '18px',
@@ -23,7 +23,7 @@ const NftInfo = ({ metadata }: any) => {
                 </div>
                 <div className={styles.traitsBox}>
                     {metadata?.attributes && metadata.attributes.map((attr: any, index: number) => {
-                        console.log(attr);
+                        // console.log(attr);
                         return (<div key={index}>
                             <p className={styles.traits}>{attr}</p>
                         </div>)

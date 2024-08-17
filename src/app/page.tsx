@@ -1,7 +1,6 @@
 import styles from './styles.module.scss'
 import React from 'react';
 import Image from 'next/image';
-import Carousel from './components/carousel/page';
 
 const collection =
     [
@@ -297,7 +296,6 @@ const Home = () => {
             </div>
             <div className={styles.trending}>
                 <p className={styles.header}>Trending Now</p>
-                <Carousel collection={collection} />
             </div>
         </div>
     );
