@@ -220,14 +220,14 @@ const portfolio = [
 
 const Analytics = () => {
 
-    const assetsByType = portfolio.reduce((acc: any, asset: Asset) => {
-        const { type, value } = asset;
-        if (!acc[type]) {
-            acc[type] = 0;
-        }
-        acc[type] += value;
-        return acc;
-    }, {});
+    // const assetsByType = portfolio.reduce((acc: any, asset: Asset) => {
+    //     const { type, value } = asset;
+    //     if (!acc[type]) {
+    //         acc[type] = 0;
+    //     }
+    //     acc[type] += value;
+    //     return acc;
+    // }, {});
 
 
     const Template = (graph: any) => {

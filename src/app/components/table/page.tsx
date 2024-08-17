@@ -104,7 +104,7 @@ const Table = ({ tokens }: any) => {
             <div className={styles.numbers}>All Time</div>
         </div>
         {tokens.map((item: any, index: number) => {
-            return (<div className={styles.row}>
+            return (<div key={index} className={styles.row}>
                 <div className={styles.text}>{item.name}</div>
                 <div className={styles.numbers}>{item.price}</div>
                 <div className={styles.numbers}>{item.amount}</div>
