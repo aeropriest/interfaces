@@ -11,8 +11,8 @@ const NftInfo = ({ metadata }: any) => {
         <div className={styles.gradientBox}>
             <Image className={styles.nftImage} src={metadata.image} height={200} width={220} alt={metadata.name} />
             <div className={styles.ownerInfo}>
-                {/* <Image className={styles.userPic} src={faker.image.avatar()} width={50} height={80} alt={"handle"} /> */}
                 <Image className={styles.userPic} src={faker.image.avatar()} width={35} height={40} alt={"handle"} />
+                {/* <Image className={styles.userPic} src={'/adam.jpeg'} width={35} height={40} alt={"handle"} /> */}
                 <div className={styles.middleInfo}>
                     <div >{metadata.name}</div>
                     <div className={styles.userName}>{faker.internet.userName()}</div>

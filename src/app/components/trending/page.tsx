@@ -15,7 +15,7 @@ const collection =
             "name": "CRYPTOPUNKS",
             "symbol": "Ͼ",
             "token_uri": "Invalid uri",
-            "metadata": "{\"image\":\"https://www.larvalabs.com/cryptopunks/cryptopunk1078.png\",\"name\":\"CryptoPunk 1078\",\"attributes\":[\"Eye Mask\",\"Hoodie\"],\"description\":\"Male\"}",
+            "metadata": "{\"image\":\"/adam.jpeg\",\"name\":\"CryptoPunk 1078\",\"attributes\":[\"Eye Mask\",\"Hoodie\"],\"description\":\"Male\"}",
             "last_token_uri_sync": "2024-08-14T20:26:58.498Z",
             "last_metadata_sync": "2024-08-14T20:26:58.804Z",
             "minter_address": null,
@@ -228,12 +228,11 @@ const collection =
     ];
 
 const Trending = () => {
-    {/* <Carousel collection={collection} /> */ }
     return (
         <div className={styles.main}>
             <div className={styles.blurred}></div>
             <div className={styles.header}>Trending NFTs</div>
-            <div ><Carousel collection={collection} /></div>
+            <Carousel collection={collection} />
         </div>
 
 
