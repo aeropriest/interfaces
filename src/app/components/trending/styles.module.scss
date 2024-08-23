@@ -1,0 +1,34 @@
+@import '@/app/variables.module.scss';
+
+.main{
+    display: flex;
+    // background-color: red;
+    flex-direction: column;        
+    // width: 80%;
+    align-items: center;
+    justify-content: center;
+    // margin-right: 200px;
+    
+}
+.header{
+    text-transform: uppercase !important; // Use with caution
+    font-weight: 900;
+    font-size: 3rem;            
+    @include text-gradient;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: red;    
+}
+
+.blurred {
+    background-color: purple;
+    filter: blur(150.58px);
+    position: absolute;
+    top: 170%;                  // Center vertically
+    left: 50%;                 // Center horizontally
+    width: 35%;               // Full width (or adjust as needed)
+    height: 35%;              // Full height (or adjust as needed)
+    transform: translate(-50%, -50%); // Adjust to center the div
+    // z-index: 1;               // Adjust z-index to place it behind other content
+}       
