@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
 import NftInfo from "../NftInfo/page";
+
 const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -11,7 +12,7 @@ const settings = {
 import React from "react";
 
 const Carousel = ({ collection }) => {
-  console.log("Carosel ", collection);
+  const nft = collection[0];
   return (
     <div className={styles.box}>
       {collection &&

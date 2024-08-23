@@ -240,8 +240,8 @@ const Home = () => {
                     <p className={styles.text}>The leading NFT Marketplace on EthereumHome to the next generation of digital creators. Discover the best NFT
                     </p>
                     <div className={styles.cta}>
-                        <button className={styles.button}>Explore</button>
-                        <button className={styles.button}>Create</button>
+                        <button className={`${styles.button} ${styles.buttonPrimary}`}>Explore</button>
+                        <button className={`${styles.button} ${styles.buttonSecondary}`}>Create</button>
                     </div>
                     <div className={styles.usp}>
                         <div className={styles.item}>
@@ -269,6 +269,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
             <div className={styles.wallets}>
                 <div className={styles.wallet}>
                     <Image src='/wallets/metamask.png' alt='metamask' width={50} height={50} />
@@ -296,7 +297,7 @@ const Home = () => {
                 </div>
             </div>
             <div className={styles.trending}>
-                <p className={styles.header}>Trending Now</p>
+                <p className={styles.header}>Trending NFTs</p>
                 <Carousel collection={collection} />
             </div>
         </div>

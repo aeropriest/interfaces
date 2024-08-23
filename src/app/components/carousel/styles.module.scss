@@ -1,6 +1,9 @@
+@import '@/app/variables.module.scss';
+
 .box{
     display: flex;
     align-items: center;
     overflow-x: auto;
-    height: 200px;
+    // height: 200px;
+    @include text-gradient;
 }

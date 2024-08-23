@@ -1,9 +1,25 @@
+'use client'
 import styles from './styles.module.scss'
 import Image from 'next/image';
 import React from 'react';
+import { faker } from '@faker-js/faker';
+
 
 const NftInfo = ({ metadata }: any) => {
     console.log('The metadata', metadata);
+    return (
+        <div className={styles.gradientBox}>
+            <Image className={styles.nftImage} src={metadata.image} height={200} width={220} alt={metadata.name} />
+            <div className={styles.ownerInfo}>
+                {/* <Image className={styles.userPic} src={faker.image.avatar()} width={50} height={80} alt={"handle"} /> */}
+                <Image className={styles.userPic} src={faker.image.avatar()} width={35} height={40} alt={"handle"} />
+                <div className={styles.middleInfo}>
+                    <div >{metadata.name}</div>
+                    <div className={styles.userName}>{faker.internet.userName()}</div>
+                </div>
+                <Image className={styles.chainPic} src={'/wallets/exodus.png'} width={15} height={20} alt={"handle"} />
+            </div>
+        </div>)
     return (
         <>
             <div className={styles.main}>

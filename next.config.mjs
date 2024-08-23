@@ -19,8 +19,39 @@ const nextConfig = {
         port: "",
         pathname: "/ipfs/**",
       },
+      {
+        protocol: "https",
+        hostname: "www.larvalabs.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ipfs.io",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "openseauserdata.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cloudflare-ipfs.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "/**",
+      },
     ],
-    domains: ["www.larvalabs.com", "ipfs.io", "openseauserdata.com"], // Add the domain here
+    domains: [
+      "www.larvalabs.com",
+      "ipfs.io",
+      "openseauserdata.com",
+      "cloudflare-ipfs.com",
+      "avatars.githubusercontent.com",
+    ], // Add the domain here
   },
   // Other Next.js config options...
 };

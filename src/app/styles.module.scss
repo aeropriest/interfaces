@@ -80,28 +80,49 @@
         .cta{
             display: flex;
             // justify-content: ;
-            gap: 80px;
+            gap: 20px;
         }    
-        .button{
+        // Base button class
+        .button {
             padding: 10px 40px;
             border-radius: 50px;
-            // background-color: blue;
+            border: 1px solid rgb(2, 116, 255);
             color: white;
-            font-weight:400;
+            font-weight: 400;
             font-size: 1.1rem;
             background-color: rgb(2, 116, 255);
-            // border: 0.5px solid white;
-            transition: all 0.3s ease; // Add smooth transition
+            transition: all 0.3s ease;
             cursor: pointer;
         
             &:hover {
-                background-color: rgb(3, 60, 215);
-                transform: scale(1.02); // Inflate the button by 5%
-                cursor: pointer; // Change the cursor to pointer on hover
+            background-color: rgb(3, 60, 215);
+            transform: scale(1.02);
+            cursor: pointer;
             }
-                
         }
-        .usp{
+        
+        // Primary button variant
+        .buttonPrimary {
+            @extend .button;
+            background-color: rgb(2, 116, 255);
+            border-color: rgb(2, 116, 255);
+        
+            &:hover {
+            background-color: rgb(3, 60, 215);
+            }
+        }
+        
+        // Secondary button variant
+        .buttonSecondary {
+            @extend .button;
+            background-color: transparent;
+            color:white !important;
+            border-color: white !important;
+        
+            &:hover {
+            background-color: rgba(2, 116, 255, 0.1);
+            }
+        }        .usp{
             display:flex;
             flex-direction:row;
             .item{
@@ -142,18 +163,11 @@
         }
     }    
     .trending{
+        // display: flex;
+        // background-color: red;
+        flex-direction: column;        
         width: 80%;
-        .blurred {
-            background-color: purple;
-            filter: blur(150.58px);
-            position: absolute;
-            top: 70%;                  // Center vertically
-            left: 60%;                 // Center horizontally
-            width: 35%;               // Full width (or adjust as needed)
-            height: 35%;              // Full height (or adjust as needed)
-            transform: translate(-50%, -50%); // Adjust to center the div
-            // z-index: 1;               // Adjust z-index to place it behind other content
-        }       
+        align-items: center;
         .header{
             font-weight: 900;
             font-size: 3rem;            
@@ -161,6 +175,8 @@
             margin-bottom: 50px;
             text-transform: capitalize;
             justify-content: center;
+            align-items: center;
+            background-color: red;
         }
     }
 }
